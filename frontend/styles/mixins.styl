@@ -1,0 +1,13 @@
+vendor(property, arg)
+  {property} arg
+  -webkit-{property} arg
+  -moz-{property} arg
+
+border-radius(radius=5px)
+  vendor('border-radius', radius)
+
+test(var)
+  if var > 10
+    color red
+  else
+    color blue

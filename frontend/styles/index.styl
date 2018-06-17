@@ -1,0 +1,47 @@
+@import 'typographic'
+@import 'variables'
+@import 'nib'
+@import 'mixins'
+
+normalize-base()
+normalize-html5()
+
+//typographic()
+
+add(a, b = 1)
+  a + b
+
+marg(a)
+  return a a/2
+
+rupture.scale = 0 400px 600px 800px 1050px 1800px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
+
+t-headers(helvetica)
+
+body
+  font-family: futura
+  relative top 20px left 10px
+  //border solid 1px @color
+  margin-right: -10px
+  .main
+    padding add(5, 5)px
+    margin marg(10)px
+    background-color: rgba(#fff, 0.4)
+    test 11
+    border solid 1px black
+    border-radius: 10px
+    color red
+  .test
+    background: red
+  a
+    background-color: white
+    +below(700px)
+      color: blue
+      +below('s')
+        color: red
+  #index
+    margin-top: 120px
+    font-family: futura
+@import 'menu'
+@import 'page'

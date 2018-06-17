@@ -1,0 +1,20 @@
+extends layouts/template.pug
+block head
+  link(href="/styles/index.css" rel="stylesheet")
+  script(src="/js/index.js" defer)
+  script(src="/js/page.js" defer)
+  title Project
+block content
+  mixin list(...items)
+      each item in items
+        li(class="link__" +item)= item
+  .page__header Welcome!
+  #sweets-menu(class="menu menu open")
+    a(href="#").menu__title Menu
+    ul.menu__list
+      +list("Торт", "Шоколадка", "Пирог")
+    div(class="body main") Lorem ipsum dolor sit amet, consectetur adipisicing elit. A sint ab sit itaque accusantium doloribus at saepe ipsum recusandae quia earum in ducimus quaerat ut expedita quibusdam aperiam quisquam, mollitia!
+    a(href="#") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, sequi.
+    
+  #index
+    
